@@ -1,0 +1,11 @@
+{
+  "name": "@synera/vite-config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./library": "./lib.ts",
+    "./app": "./app.ts"
+  },
+  "dependencies": { "vite":  "^8.2.1" }
+}
