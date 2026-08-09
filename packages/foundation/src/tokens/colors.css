@@ -32,5 +32,6 @@
   --color-danger-bg:  oklch(0.95 0.04  25);
 
   /* ── Accent (teal — used for step numbers, kickers, links) ── */
-  --color-accent: var(--color-brand-400);
-}
+  /* Use a slightly darker accent to ensure sufficient contrast with neutral-50. */
+  --color-accent: oklch(0.45 0.10 195);
+}

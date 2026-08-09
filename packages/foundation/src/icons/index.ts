@@ -3,10 +3,19 @@
 
 export type IconAttrs = Record<string, string | number | boolean>;
 
+const allowedAttrs = new Set([
+	'width', 'height', 'class', 'fill', 'stroke', 'stroke-width', 'viewBox', 'role', 'aria-hidden', 'aria-label', 'focusable'
+]);
+
+function escapeHtml(value: string) {
+	return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
 const DEFAULT_SVG = (attrs: IconAttrs = {}) => {
 	const attrStr = Object.entries(attrs)
-		.map(([k, v]) => `${k}="${String(v)}"`)
-		.join(" ");
+		.filter(([k]) => allowedAttrs.has(k))
+		.map(([k, v]) => `${k}="${escapeHtml(String(v))}"`)
+		.join(' ');
 	return `<svg ${attrStr} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect width="24" height="24" fill="currentColor"/></svg>`;
 };
 

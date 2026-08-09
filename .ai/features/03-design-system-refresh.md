@@ -26,7 +26,7 @@ Mockup: Synera landing page — navy-teal palette, editorial serif (Cormorant Ga
 - [x] `pattern-card` — brand-50 header bg, hover shadow, footer subtle bg
 - [x] `node-badge` — teal active border, neutral resting state
 - [x] `trust-logo-row` — stacked name/sub layout, monochrome columns
-- [x] `apps/playground` — full rebuild with Cormorant Garamond, all components demoed
+- [x] `apps/playground` — full rebuild with Cormorant Garamond, selected components demoed (typography, buttons, badges, avatars, stat-panel, pattern-card, feature-icon-block, forms, data-table, trust-logo-row)
 
 ## Font Loading
 Google Fonts: `Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500` + `Inter:wght@400;500;600;700`

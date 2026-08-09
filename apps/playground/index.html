@@ -13,7 +13,7 @@
     .pg-wrap {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 48px 40px 80px;
+      padding: 48px clamp(16px, 4vw, 40px) 80px;
     }
     .pg-header {
       margin-bottom: 56px;
@@ -56,7 +56,7 @@
     .pg-section { margin-bottom: 64px; }
     .pg-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 24px;
     }
     .pg-card {
@@ -226,31 +226,31 @@
         <div class="feature-icon-block__step">01</div>
         <div class="feature-icon-block__title">Connect</div>
         <p class="feature-icon-block__desc">Unify data from anywhere. Build a complete picture.</p>
-        <a class="feature-icon-block__arrow" href="#">→</a>
+        <span class="feature-icon-block__arrow" aria-hidden="true">→</span>
       </div>
       <div class="feature-icon-block">
         <div class="feature-icon-block__step">02</div>
         <div class="feature-icon-block__title">Simulate</div>
         <p class="feature-icon-block__desc">Run scenarios in a risk-free environment.</p>
-        <a class="feature-icon-block__arrow" href="#">→</a>
+        <span class="feature-icon-block__arrow" aria-hidden="true">→</span>
       </div>
       <div class="feature-icon-block">
         <div class="feature-icon-block__step">03</div>
         <div class="feature-icon-block__title">Discover</div>
         <p class="feature-icon-block__desc">Reveal patterns, drivers, and hidden opportunities.</p>
-        <a class="feature-icon-block__arrow" href="#">→</a>
+        <span class="feature-icon-block__arrow" aria-hidden="true">→</span>
       </div>
       <div class="feature-icon-block">
         <div class="feature-icon-block__step">04</div>
         <div class="feature-icon-block__title">Decide</div>
         <p class="feature-icon-block__desc">Get clear recommendations and measure impact.</p>
-        <a class="feature-icon-block__arrow" href="#">→</a>
+        <span class="feature-icon-block__arrow" aria-hidden="true">→</span>
       </div>
       <div class="feature-icon-block">
         <div class="feature-icon-block__step">05</div>
         <div class="feature-icon-block__title">Act</div>
         <p class="feature-icon-block__desc">Turn insights into real-world results with confidence.</p>
-        <a class="feature-icon-block__arrow" href="#">→</a>
+        <span class="feature-icon-block__arrow" aria-hidden="true">→</span>
       </div>
     </div>
   </div>
@@ -262,17 +262,17 @@
       <div class="pg-card">
         <div class="form-group">
           <div class="form-label">
-            <label>Email address</label>
+            <label for="email-input">Email address</label>
             <a class="form-label__link" href="#">Forgot?</a>
           </div>
           <div class="form-input-wrapper">
-            <input type="email" class="form-input" placeholder="name@company.com">
+            <input id="email-input" type="email" class="form-input" placeholder="name@company.com">
           </div>
         </div>
         <div class="form-group">
-          <div class="form-label"><label>Password</label></div>
+          <div class="form-label"><label for="password-input">Password</label></div>
           <div class="form-input-wrapper">
-            <input type="password" class="form-input" placeholder="••••••••">
+            <input id="password-input" type="password" class="form-input" placeholder="••••••••">
           </div>
         </div>
         <button class="btn btn--primary" style="width:100%;justify-content:center">Sign In</button>

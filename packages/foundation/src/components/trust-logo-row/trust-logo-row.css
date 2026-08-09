@@ -35,6 +35,12 @@
   transition: color var(--duration-base) var(--ease-standard);
 }
 .trust-logo-row__logo:hover { color: var(--color-text-muted); }
+/* Ensure child name/sub elements also follow the hover color instead of
+   keeping their explicit colors. This lets the hover affect the rendered text. */
+.trust-logo-row__logo:hover .trust-logo-row__logo-name,
+.trust-logo-row__logo:hover .trust-logo-row__logo-sub {
+  color: var(--color-text-muted);
+}
 
 .trust-logo-row__logo-icon {
   width: 28px;
