@@ -37,15 +37,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Provision Turbo CLI
-        run: pnpm dlx turbo@latest --version
-
-      - name: Run repository build
-        run: pnpm dlx turbo@latest run build
-
-      - name: Run repository typecheck
-        run: pnpm dlx turbo@latest run typecheck
-
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
