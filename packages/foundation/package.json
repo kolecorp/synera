@@ -2,17 +2,31 @@
   "name": "@synera/foundation",
   "version": "1.0.0",
   "description": "Official UI foundation for Synera",
- "sideEffects": ["**/*.css"],
-  "files": ["dist"],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
+      "source": "./src/index.ts",
       "types": "./dist/index.d.ts",
       "import": "./dist/foundation.js"
     },
-    "./css": "./dist/foundation.css",
+    "./css": {
+      "source": "./src/css/index.css",
+      "default": "./dist/foundation.css"
+    },
     "./adapters/svelte": {
+      "source": "./src/adapters/svelte/index.ts",
       "types": "./dist/adapters/svelte.d.ts",
       "import": "./dist/adapters/svelte.js"
+    },
+    "./icons": {
+      "source": "./src/icons/index.ts",
+      "types": "./dist/icons.d.ts",
+      "import": "./dist/icons.js"
     }
   },
   "scripts": {
@@ -30,13 +44,17 @@
       "onFail": "download"
     }
   },
-   "devDependencies": {
+  "devDependencies": {
     "@synera/tsconfig": "workspace:*",
     "@synera/vite-config": "workspace:*",
     "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^18.2.0",
     "tailwindcss": "^4.0.0",
     "typescript": "^7.0.2",
     "vite": "^8.2.1"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "lucide-react": "^1.30.0"
+  }
 }

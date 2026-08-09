@@ -1,0 +1,2 @@
+// Svelte adapter entry
+export {};

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synera — Component Playground</title>
+  <!-- Fonts: Cormorant Garamond (editorial serif) + Inter (UI sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" src="/src/main.ts"></script>
+  <style>
+    .pg-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 40px 80px;
+    }
+    .pg-header {
+      margin-bottom: 56px;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 32px;
+    }
+    .pg-header__eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 12px;
+    }
+    .pg-header__title {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--color-text);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin: 0 0 12px;
+    }
+    .pg-header__title em { font-style: italic; }
+    .pg-header__sub {
+      color: var(--color-text-muted);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+    .pg-section-label {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--color-text-placeholder);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .pg-section { margin-bottom: 64px; }
+    .pg-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .pg-card {
+      background: var(--color-surface-elevated);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .pg-card h3 {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin: 0 0 20px;
+    }
+    .pg-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+    .pg-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="pg-wrap">
+
+  <!-- Header -->
+  <div class="pg-header">
+    <div class="pg-header__eyebrow">Design System</div>
+    <h1 class="pg-header__title">Synera <em>Foundation</em></h1>
+    <p class="pg-header__sub">Component playground — Cormorant Garamond · Inter · Navy-Teal palette</p>
+  </div>
+
+  <!-- Typography -->
+  <div class="pg-section">
+    <div class="pg-section-label">Typography</div>
+    <div class="pg-card">
+      <div class="kicker" style="margin-bottom:12px">The Intelligent Simulation Platform</div>
+      <h1 style="font-family:var(--font-serif);font-size:var(--text-5xl);font-weight:300;letter-spacing:-0.01em;margin:0 0 4px">Simulate reality.</h1>
+      <h1 style="font-family:var(--font-serif);font-size:var(--text-5xl);font-weight:300;letter-spacing:-0.01em;margin:0 0 4px">Reveal possibilities.</h1>
+      <h1 style="font-family:var(--font-serif);font-size:var(--text-5xl);font-weight:300;font-style:italic;letter-spacing:-0.01em;margin:0 0 24px">Shape what's next.</h1>
+      <p style="color:var(--color-text-muted);line-height:1.6;max-width:480px;font-size:var(--text-base)">
+        Synera transforms complex data into intelligent simulations — empowering teams to explore, predict, and decide with confidence.
+      </p>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="pg-section">
+    <div class="pg-section-label">Buttons</div>
+    <div class="pg-card">
+      <div class="pg-row">
+        <button class="btn btn--primary">
+          Explore the Platform
+          <span class="btn__arrow">→</span>
+        </button>
+        <button class="btn btn--secondary">See How It Works</button>
+        <button class="btn btn--ghost">Log in</button>
+        <button class="btn btn--primary btn--sm">Request Access</button>
+        <button class="btn btn--secondary btn--sm">Learn More</button>
+        <button class="btn btn--primary" disabled>Disabled</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Badges -->
+  <div class="pg-section">
+    <div class="pg-section-label">Badges</div>
+    <div class="pg-card">
+      <div class="pg-row">
+        <span class="badge badge--success badge--dot">Active</span>
+        <span class="badge badge--warning badge--dot">Pending</span>
+        <span class="badge badge--danger badge--dot">Critical</span>
+        <span class="badge badge--neutral">Archived</span>
+        <span class="badge badge--teal">Simulation</span>
+        <span class="badge badge--success">98.6%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Avatars -->
+  <div class="pg-section">
+    <div class="pg-section-label">Avatars</div>
+    <div class="pg-card">
+      <div class="pg-row" style="align-items:flex-end">
+        <div class="avatar avatar--sm"><span class="avatar__fallback">A</span></div>
+        <div class="avatar"><span class="avatar__fallback">SY</span></div>
+        <div class="avatar avatar--teal"><span class="avatar__fallback">JD</span></div>
+        <div class="avatar avatar--lg"><span class="avatar__fallback">AB</span></div>
+        <div class="avatar avatar--xl"><span class="avatar__fallback">MC</span></div>
+        <div class="avatar-group" style="margin-left:8px">
+          <div class="avatar"><span class="avatar__fallback">A</span></div>
+          <div class="avatar avatar--teal"><span class="avatar__fallback">B</span></div>
+          <div class="avatar"><span class="avatar__fallback">C</span></div>
+          <div class="avatar avatar-group__overflow">+4</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards grid -->
+  <div class="pg-section">
+    <div class="pg-section-label">Stat Panel · Pattern Card</div>
+    <div class="pg-grid">
+
+      <!-- Stat panel -->
+      <div class="stat-panel">
+        <div class="stat-panel__card">
+          <div class="stat-panel__section">
+            <div class="stat-panel__kicker">Demand Forecast</div>
+            <div class="stat-panel__metric">
+              <div class="stat-panel__metric-label">Model accuracy</div>
+              <div class="stat-panel__metric-value">98.6%</div>
+              <div class="stat-panel__metric-delta stat-panel__metric-delta--up">↑ +18.6% vs last month</div>
+            </div>
+          </div>
+        </div>
+        <div class="stat-panel__card">
+          <div class="stat-panel__section">
+            <h2 class="stat-panel__title">Active Model</h2>
+            <div class="stat-panel__list">
+              <div class="stat-panel__row">
+                <div class="stat-panel__label">Entities</div>
+                <div class="stat-panel__value">1,248</div>
+              </div>
+              <div class="stat-panel__row">
+                <div class="stat-panel__label">Relationships</div>
+                <div class="stat-panel__value">18,402</div>
+              </div>
+              <div class="stat-panel__row">
+                <div class="stat-panel__label">Scenarios run</div>
+                <div class="stat-panel__value">1.2M+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pattern card -->
+      <div class="pattern-card">
+        <div class="pattern-card__header">Pattern Detected</div>
+        <div class="pattern-card__body">
+          <strong>Usage</strong> increases significantly when the new feature is toggled — correlates with a 24% reduction in support tickets.
+        </div>
+        <div class="pattern-card__footer">
+          <span class="pattern-card__confidence-label">Confidence</span>
+          <span class="pattern-card__confidence-value">94.2%</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Feature steps -->
+  <div class="pg-section">
+    <div class="pg-section-label">Feature Steps</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:32px">
+      <div class="feature-icon-block">
+        <div class="feature-icon-block__step">01</div>
+        <div class="feature-icon-block__title">Connect</div>
+        <p class="feature-icon-block__desc">Unify data from anywhere. Build a complete picture.</p>
+        <a class="feature-icon-block__arrow" href="#">→</a>
+      </div>
+      <div class="feature-icon-block">
+        <div class="feature-icon-block__step">02</div>
+        <div class="feature-icon-block__title">Simulate</div>
+        <p class="feature-icon-block__desc">Run scenarios in a risk-free environment.</p>
+        <a class="feature-icon-block__arrow" href="#">→</a>
+      </div>
+      <div class="feature-icon-block">
+        <div class="feature-icon-block__step">03</div>
+        <div class="feature-icon-block__title">Discover</div>
+        <p class="feature-icon-block__desc">Reveal patterns, drivers, and hidden opportunities.</p>
+        <a class="feature-icon-block__arrow" href="#">→</a>
+      </div>
+      <div class="feature-icon-block">
+        <div class="feature-icon-block__step">04</div>
+        <div class="feature-icon-block__title">Decide</div>
+        <p class="feature-icon-block__desc">Get clear recommendations and measure impact.</p>
+        <a class="feature-icon-block__arrow" href="#">→</a>
+      </div>
+      <div class="feature-icon-block">
+        <div class="feature-icon-block__step">05</div>
+        <div class="feature-icon-block__title">Act</div>
+        <p class="feature-icon-block__desc">Turn insights into real-world results with confidence.</p>
+        <a class="feature-icon-block__arrow" href="#">→</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forms -->
+  <div class="pg-section">
+    <div class="pg-section-label">Forms · Auth</div>
+    <div class="pg-grid">
+      <div class="pg-card">
+        <div class="form-group">
+          <div class="form-label">
+            <label>Email address</label>
+            <a class="form-label__link" href="#">Forgot?</a>
+          </div>
+          <div class="form-input-wrapper">
+            <input type="email" class="form-input" placeholder="name@company.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-label"><label>Password</label></div>
+          <div class="form-input-wrapper">
+            <input type="password" class="form-input" placeholder="••••••••">
+          </div>
+        </div>
+        <button class="btn btn--primary" style="width:100%;justify-content:center">Sign In</button>
+        <div class="auth-divider">or continue with</div>
+        <button class="auth-button">
+          <svg class="auth-button__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Sign in with SSO
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data table -->
+  <div class="pg-section">
+    <div class="pg-section-label">Data Table</div>
+    <div class="data-table-container">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Organisation</th>
+            <th>Status</th>
+            <th class="data-table__cell--numeric">Accuracy</th>
+            <th class="data-table__cell--numeric">Scenarios</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Aisha Bello</td>
+            <td>LumenCare Health</td>
+            <td><span class="badge badge--success badge--dot">Active</span></td>
+            <td class="data-table__cell--numeric tabular-nums">98.4%</td>
+            <td class="data-table__cell--numeric tabular-nums">12,048</td>
+          </tr>
+          <tr>
+            <td>Marcus Chen</td>
+            <td>Northfield Schools</td>
+            <td><span class="badge badge--warning badge--dot">Pending</span></td>
+            <td class="data-table__cell--numeric tabular-nums">74.2%</td>
+            <td class="data-table__cell--numeric tabular-nums">3,890</td>
+          </tr>
+          <tr>
+            <td>Priya Nair</td>
+            <td>Veridian Group</td>
+            <td><span class="badge badge--success badge--dot">Active</span></td>
+            <td class="data-table__cell--numeric tabular-nums">91.7%</td>
+            <td class="data-table__cell--numeric tabular-nums">8,210</td>
+          </tr>
+          <tr>
+            <td>Felix Okafor</td>
+            <td>Pinnacle Logistics</td>
+            <td><span class="badge badge--danger badge--dot">Critical</span></td>
+            <td class="data-table__cell--numeric tabular-nums">42.1%</td>
+            <td class="data-table__cell--numeric tabular-nums">421</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Trust logos -->
+  <div class="trust-logo-row">
+    <div class="trust-logo-row__label">Trusted by innovative organizations</div>
+    <div class="trust-logo-row__logos">
+      <div class="trust-logo-row__logo">
+        <div class="trust-logo-row__logo-name">LumenCare</div>
+        <div class="trust-logo-row__logo-sub">Health</div>
+      </div>
+      <div class="trust-logo-row__logo">
+        <div class="trust-logo-row__logo-name">Northfield</div>
+        <div class="trust-logo-row__logo-sub">Schools</div>
+      </div>
+      <div class="trust-logo-row__logo">
+        <div class="trust-logo-row__logo-name">Veridian</div>
+        <div class="trust-logo-row__logo-sub">Group</div>
+      </div>
+      <div class="trust-logo-row__logo">
+        <div class="trust-logo-row__logo-name">Pinnacle</div>
+        <div class="trust-logo-row__logo-sub">Logistics</div>
+      </div>
+      <div class="trust-logo-row__logo">
+        <div class="trust-logo-row__logo-name">Harborline</div>
+        <div class="trust-logo-row__logo-sub">Retail</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

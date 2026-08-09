@@ -10,5 +10,6 @@ export default defineLibraryConfig({
   entry: {
     foundation: path.resolve(root, "src/index.ts"),
     "adapters/svelte": path.resolve(root, "src/adapters/svelte/index.ts"),
+    icons: path.resolve(root, "src/icons/index.ts"),
   },
 });

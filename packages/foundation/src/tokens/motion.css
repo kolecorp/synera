@@ -1,6 +1,6 @@
-@theme {
+:root {
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
   --duration-fast: 100ms;
   --duration-base: 150ms;
   --duration-slow: 250ms;
-}
+}

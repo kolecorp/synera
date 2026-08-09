@@ -1,6 +1,6 @@
-@theme {
+:root {
   --z-dropdown: 1000;
-  --z-dialog: 1100;
-  --z-toast: 1200;
-  --z-tooltip: 1300;
-}
+  --z-dialog:   1100;
+  --z-toast:    1200;
+  --z-tooltip:  1300;
+}
