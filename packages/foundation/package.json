@@ -2,8 +2,25 @@
   "name": "@synera/foundation",
   "version": "1.0.0",
   "description": "Official UI foundation for Synera",
- "sideEffects": ["**/*.css"],
-  "files": ["dist"],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/foundation.js"
+    },
+    "./css": {
+      "default": "./dist/foundation.css"
+    },
+    "./icons": {
+      "types": "./dist/icons.d.ts",
+      "import": "./dist/icons.js"
+    }
+  },
   "scripts": {
     "dev": "vite build --watch",
     "build": "vite build && tsc -p tsconfig.json --emitDeclarationOnly",
@@ -19,7 +36,7 @@
       "onFail": "download"
     }
   },
-   "devDependencies": {
+  "devDependencies": {
     "@synera/tsconfig": "workspace:*",
     "@synera/vite-config": "workspace:*",
     "@tailwindcss/vite": "^4.0.0",

@@ -1,0 +1,58 @@
+/* Feature step block — numbered with teal accent (e.g. 01 Connect, 02 Simulate…) */
+.feature-icon-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Step number — teal, small, tabular */
+.feature-icon-block__step {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: var(--tracking-wide);
+}
+
+/* Optional illustration / icon area */
+.feature-icon-block__visual {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-neutral-300);
+  margin-bottom: var(--spacing-sm);
+}
+
+.feature-icon-block__title {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.feature-icon-block__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* Arrow link at the bottom */
+.feature-icon-block__arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  margin-top: var(--spacing-sm);
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+.feature-icon-block__arrow:hover {
+  color: var(--color-text);
+}
+

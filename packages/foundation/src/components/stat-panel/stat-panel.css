@@ -1,0 +1,129 @@
+/* Stat panel — dashboard metric card */
+.stat-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.stat-panel__card {
+  background-color: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-panel__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Section title — serif display */
+.stat-panel__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-light);
+  color: var(--color-text);
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+}
+
+/* Kicker above section */
+.stat-panel__kicker {
+  font-family: var(--font-sans);
+  font-size: var(--text-2xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.stat-panel__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.stat-panel__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xs) 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+}
+.stat-panel__row:last-child {
+  border-bottom: none;
+}
+
+.stat-panel__label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-text-muted);
+}
+
+.stat-panel__label-icon {
+  width: 14px;
+  height: 14px;
+  opacity: 0.6;
+}
+
+.stat-panel__value {
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+}
+
+/* Hero metric — large display number */
+.stat-panel__metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.stat-panel__metric-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+.stat-panel__metric-value {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-weight-light);
+  color: var(--color-text);
+  line-height: 1;
+  letter-spacing: var(--tracking-tight);
+  font-variant-numeric: tabular-nums;
+}
+.stat-panel__metric-delta {
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+}
+.stat-panel__metric-delta--up   { color: var(--color-success); }
+.stat-panel__metric-delta--down { color: var(--color-danger); }
+
+/* Status indicator */
+.stat-panel__status {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+.stat-panel__status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+}
+.stat-panel__status-dot--success { background-color: var(--color-success); }
+.stat-panel__status-dot--warning { background-color: var(--color-warning); }
+
+.stat-panel__description {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}

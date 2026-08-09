@@ -1,0 +1,1 @@
+import "@synera/foundation/css";

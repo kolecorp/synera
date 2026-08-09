@@ -1,0 +1,18 @@
+:root,
+[data-theme="light"] {
+  --color-surface:          var(--color-neutral-50);   /* near-white page bg */
+  --color-surface-elevated: var(--color-neutral-0);   /* pure white cards */
+  --color-surface-subtle:   var(--color-neutral-100); /* subtle tinted areas */
+
+  --color-text:             var(--color-neutral-900);
+  --color-text-muted:       var(--color-neutral-600);
+  --color-text-placeholder: var(--color-neutral-400);
+
+  --color-border:           var(--color-neutral-200);
+  --color-border-strong:    var(--color-neutral-300);
+
+  /* CTA / interactive */
+  --color-cta-bg:           var(--color-brand-950);
+  --color-cta-text:         var(--color-neutral-0);
+  --color-cta-hover:        var(--color-brand-900);
+}

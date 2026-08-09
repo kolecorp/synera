@@ -1,0 +1,66 @@
+/* Trust logo row — monochrome org logos */
+.trust-logo-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-2xl) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.trust-logo-row__label {
+  font-family: var(--font-sans);
+  font-size: var(--text-2xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-placeholder);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+}
+
+.trust-logo-row__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3xl);
+  flex-wrap: wrap;
+}
+
+.trust-logo-row__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  color: var(--color-neutral-400);
+  transition: color var(--duration-base) var(--ease-standard);
+}
+.trust-logo-row__logo:hover { color: var(--color-text-muted); }
+/* Ensure child name/sub elements also follow the hover color instead of
+   keeping their explicit colors. This lets the hover affect the rendered text. */
+.trust-logo-row__logo:hover .trust-logo-row__logo-name,
+.trust-logo-row__logo:hover .trust-logo-row__logo-sub {
+  color: var(--color-text-muted);
+}
+
+.trust-logo-row__logo-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.trust-logo-row__logo-name {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-text-muted);
+}
+
+.trust-logo-row__logo-sub {
+  font-family: var(--font-sans);
+  font-size: var(--text-2xs);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-text-placeholder);
+}
+

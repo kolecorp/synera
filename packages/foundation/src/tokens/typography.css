@@ -1,0 +1,63 @@
+:root {
+  /* ── Fonts ── */
+  /* Cormorant Garamond: high-contrast editorial serif (closest free match to the mockup) */
+  --font-serif: "Cormorant Garamond", "Cormorant", ui-serif, georgia, serif;
+  /* Inter: precise, dense sans-serif for all UI elements */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+
+  /* ── Type scale ── */
+  --text-2xs: 0.625rem;  /* 10px — kicker labels */
+  --text-xs:  0.75rem;   /* 12px */
+  --text-sm:  0.875rem;  /* 14px */
+  --text-base:1rem;      /* 16px */
+  --text-lg:  1.125rem;  /* 18px */
+  --text-xl:  1.25rem;   /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 2rem;      /* 32px */
+  --text-4xl: 2.75rem;   /* 44px */
+  --text-5xl: 3.5rem;    /* 56px */
+  --text-6xl: 4.5rem;    /* 72px */
+
+  /* ── Weights ── */
+  --font-weight-light:    300;
+  --font-weight-normal:   400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+
+  /* ── Line heights ── */
+  --leading-tight:  1.1;
+  --leading-snug:   1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed:1.6;
+
+  /* ── Letter spacing ── */
+  --tracking-tight:  -0.01em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;
+  --tracking-wider:   0.08em;
+  --tracking-widest:  0.12em;
+}
+
+/* Typography utilities */
+.font-serif    { font-family: var(--font-serif); }
+.font-sans     { font-family: var(--font-sans); }
+.font-mono     { font-family: var(--font-mono); }
+.italic        { font-style: italic; }
+.tabular-nums  { font-variant-numeric: tabular-nums; }
+.uppercase     { text-transform: uppercase; }
+.tracking-wide { letter-spacing: var(--tracking-wide); }
+.tracking-widest{ letter-spacing: var(--tracking-widest); }
+
+/* Kicker — small uppercase label with teal tint (e.g. "THE INTELLIGENT SIMULATION PLATFORM") */
+.kicker {
+  font-family: var(--font-sans);
+  font-size: var(--text-2xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.italic { font-style: italic; }

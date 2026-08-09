@@ -1,0 +1,48 @@
+.observation-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-lg) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.observation-item__index {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  width: 48px;
+  flex-shrink: 0;
+}
+
+.observation-item__content {
+  flex: 1;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  padding-right: var(--spacing-xl);
+  line-height: 1.5;
+}
+
+.observation-item__score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-xxs);
+}
+
+.observation-item__score-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.observation-item__score-value {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-size: var(--text-xl);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+}
+
+.observation-item__chevron {
+  width: 16px;
+  height: 16px;
+  color: var(--color-text-muted);
+}
