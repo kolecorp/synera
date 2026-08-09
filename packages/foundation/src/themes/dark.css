@@ -1,0 +1,5 @@
+[data-theme="dark"] {
+  --color-surface: var(--color-neutral-950);
+  --color-text: var(--color-neutral-50);
+  --color-border: var(--color-neutral-800);
+}

@@ -1,0 +1,31 @@
+@theme {
+  /* Brand Colors - Sage/Olive green */
+  --color-brand-50: oklch(0.96 0.02 150);
+  --color-brand-100: oklch(0.92 0.04 150);
+  --color-brand-500: oklch(0.45 0.05 150); /* Accent green */
+  --color-brand-600: oklch(0.38 0.04 150);
+  --color-brand-900: oklch(0.2 0.01 150); /* Primary dark (near black with green undertone) */
+
+  /* Neutral Colors - Warm Grays */
+  --color-neutral-50: oklch(0.98 0.01 90); /* Warm off-white background */
+  --color-neutral-100: oklch(0.95 0.01 90);
+  --color-neutral-200: oklch(0.92 0.01 90); /* Border */
+  --color-neutral-400: oklch(0.7 0.01 90); /* Placeholder */
+  --color-neutral-500: oklch(0.6 0.01 90);
+  --color-neutral-600: oklch(0.5 0.01 90); /* Secondary text */
+  --color-neutral-800: oklch(0.3 0.01 90);
+  --color-neutral-900: oklch(0.2 0.01 150);
+  --color-neutral-950: oklch(0.15 0.01 150);
+
+  --color-white: oklch(1 0 0);
+
+  /* Status Colors */
+  --color-success: oklch(0.55 0.1 145); /* Heatmap green / Strong relation */
+  --color-warning: oklch(0.7 0.15 70); /* Heatmap amber / Medium relation */
+  --color-danger: oklch(0.55 0.15 25); /* Heatmap red */
+  
+  /* Status backgrounds (lighter variants for cells) */
+  --color-success-bg: oklch(0.9 0.05 145);
+  --color-warning-bg: oklch(0.95 0.08 70);
+  --color-danger-bg: oklch(0.9 0.05 25);
+}

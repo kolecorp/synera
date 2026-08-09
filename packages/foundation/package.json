@@ -4,6 +4,17 @@
   "description": "Official UI foundation for Synera",
  "sideEffects": ["**/*.css"],
   "files": ["dist"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/foundation.js"
+    },
+    "./css": "./dist/foundation.css",
+    "./adapters/svelte": {
+      "types": "./dist/adapters/svelte.d.ts",
+      "import": "./dist/adapters/svelte.js"
+    }
+  },
   "scripts": {
     "dev": "vite build --watch",
     "build": "vite build && tsc -p tsconfig.json --emitDeclarationOnly",

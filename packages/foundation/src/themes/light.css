@@ -1,0 +1,9 @@
+:root,
+[data-theme="light"] {
+  --color-surface: var(--color-neutral-50);
+  --color-surface-elevated: var(--color-white);
+  --color-text: var(--color-neutral-900);
+  --color-text-muted: var(--color-neutral-600);
+  --color-text-placeholder: var(--color-neutral-400);
+  --color-border: var(--color-neutral-200);
+}
