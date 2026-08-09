@@ -9,10 +9,10 @@ Tracking the build-out of missing foundation components.
 - [x] `node-badge`
 - [x] `observation-item`
 - [x] `data-table`
-- [ ] `drawer`
-- [ ] `pattern-card`
-- [ ] `badge`
-- [ ] `avatar`
+- [x] `drawer`
+- [x] `pattern-card`
+- [x] `badge`
+- [x] `avatar`
 - [ ] `form-input`
 - [ ] `auth-button`
 - [ ] `marketing-nav`
