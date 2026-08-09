@@ -6,9 +6,9 @@ Tracking the build-out of missing foundation components.
 - [x] `sidebar`
 - [x] `topbar`
 - [x] `stat-panel`
-- [ ] `node-badge`
-- [ ] `observation-item`
-- [ ] `data-table`
+- [x] `node-badge`
+- [x] `observation-item`
+- [x] `data-table`
 - [ ] `drawer`
 - [ ] `pattern-card`
 - [ ] `badge`
