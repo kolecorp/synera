@@ -1,125 +1,17 @@
-//#region \0rolldown/runtime.js
-var e = Object.defineProperty, t = (e, t) => () => (t || (e((t = { exports: {} }).exports, t), e = null), t.exports), n = (t, n) => {
-	let r = {};
-	for (var i in t) e(r, i, {
-		get: t[i],
-		enumerable: !0
-	});
-	return n || e(r, Symbol.toStringTag, { value: "Module" }), r;
-}, r = /* @__PURE__ */ t(((e) => {
-	var t = Symbol.for("react.transitional.element"), n = Symbol.for("react.portal"), r = Symbol.for("react.fragment"), i = Symbol.for("react.strict_mode"), a = Symbol.for("react.profiler"), o = Symbol.for("react.consumer"), s = Symbol.for("react.context"), c = Symbol.for("react.forward_ref"), l = Symbol.for("react.suspense"), u = Symbol.for("react.memo"), d = Symbol.for("react.lazy"), f = Symbol.for("react.activity"), p = Symbol.iterator;
-	function ee(e) {
-		return typeof e != "object" || !e ? null : (e = p && e[p] || e["@@iterator"], typeof e == "function" ? e : null);
-	}
-	var te = {
-		isMounted: function() {
-			return !1;
-		},
-		enqueueForceUpdate: function() {},
-		enqueueReplaceState: function() {},
-		enqueueSetState: function() {}
-	}, ne = Object.assign, m = {};
-	function h(e, t, n) {
-		this.props = e, this.context = t, this.refs = m, this.updater = n || te;
-	}
-	h.prototype.isReactComponent = {}, h.prototype.setState = function(e, t) {
-		if (typeof e != "object" && typeof e != "function" && e != null) throw Error("takes an object of state variables to update or a function which returns an object of state variables.");
-		this.updater.enqueueSetState(this, e, t, "setState");
-	}, h.prototype.forceUpdate = function(e) {
-		this.updater.enqueueForceUpdate(this, e, "forceUpdate");
-	};
-	function g() {}
-	g.prototype = h.prototype;
-	function _(e, t, n) {
-		this.props = e, this.context = t, this.refs = m, this.updater = n || te;
-	}
-	var v = _.prototype = new g();
-	v.constructor = _, ne(v, h.prototype), v.isPureReactComponent = !0;
-	var re = Array.isArray;
-	function y() {}
-	var b = {
-		H: null,
-		A: null,
-		T: null,
-		S: null
-	}, x = Object.prototype.hasOwnProperty;
-	function S(e, n, r) {
-		var i = r.ref;
-		return {
-			$$typeof: t,
-			type: e,
-			key: n,
-			ref: i === void 0 ? null : i,
-			props: r
-		};
-	}
-	function C(e, t) {
-		return S(e.type, t, e.props);
-	}
-	function w(e) {
-		return typeof e == "object" && !!e && e.$$typeof === t;
-	}
-	function T(e) {
-		var t = {
-			"=": "=0",
-			":": "=2"
-		};
-		return "$" + e.replace(/[=:]/g, function(e) {
-			return t[e];
-		});
-	}
-	var E = /\/+/g;
-	function D(e, t) {
-		return typeof e == "object" && e && e.key != null ? T("" + e.key) : t.toString(36);
-	}
-	function O(e) {
-		switch (e.status) {
-			case "fulfilled": return e.value;
-			case "rejected": throw e.reason;
-			default: switch (typeof e.status == "string" ? e.then(y, y) : (e.status = "pending", e.then(function(t) {
-				e.status === "pending" && (e.status = "fulfilled", e.value = t);
-			}, function(t) {
-				e.status === "pending" && (e.status = "rejected", e.reason = t);
-			})), e.status) {
-				case "fulfilled": return e.value;
-				case "rejected": throw e.reason;
-			}
-		}
-		throw e;
-	}
-	function k(e, r, i, a, o) {
-		var s = typeof e;
-		(s === "undefined" || s === "boolean") && (e = null);
-		var c = !1;
-		if (e === null) c = !0;
-		else switch (s) {
-			case "bigint":
-			case "string":
-			case "number":
-				c = !0;
-				break;
-			case "object": switch (e.$$typeof) {
-				case t:
-				case n:
-					c = !0;
-					break;
-				case d: return c = e._init, k(c(e._payload), r, i, a, o);
-			}
-		}
-		if (c) return o = o(e), c = a === "" ? "." + D(e, 0) : a, re(o) ? (i = "", c != null && (i = c.replace(E, "$&/") + "/"), k(o, r, i, "", function(e) {
-			return e;
-		})) : o != null && (w(o) && (o = C(o, i + (o.key == null || e && e.key === o.key ? "" : ("" + o.key).replace(E, "$&/") + "/") + c)), r.push(o)), 1;
-		c = 0;
-		var l = a === "" ? "." : a + ":";
-		if (re(e)) for (var u = 0; u < e.length; u++) a = e[u], s = l + D(a, u), c += k(a, r, i, s, o);
-		else if (u = ee(e), typeof u == "function") for (e = u.call(e), u = 0; !(a = e.next()).done;) a = a.value, s = l + D(a, u++), c += k(a, r, i, s, o);
-		else if (s === "object") {
-			if (typeof e.then == "function") return k(O(e), r, i, a, o);
-			throw r = String(e), Error("Objects are not valid as a React child (found: " + (r === "[object Object]" ? "object with keys {" + Object.keys(e).join(", ") + "}" : r) + "). If you meant to render a collection of children, use an array instead.");
-		}
-		return c;
-	}
-	function A(e, t, n) {
+// Framework-neutral built icons module (minimal).
+function attrString(attrs) {
+  if (!attrs) return "";
+  return Object.entries(attrs).map(([k, v]) => `${k}="${String(v)}"`).join(" ");
+}
+
+export function getIconSvg(name, attrs) {
+  const svg = `<svg ${attrString(attrs)} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect width="24" height="24" fill="currentColor"/></svg>`;
+  return svg;
+}
+
+export const availableIcons = ["placeholder"];
+
+export default getIconSvg;
 		if (e == null) return e;
 		var r = [], i = 0;
 		return k(e, r, "", "", function(e) {
