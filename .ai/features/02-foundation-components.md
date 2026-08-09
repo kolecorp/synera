@@ -13,8 +13,8 @@ Tracking the build-out of missing foundation components.
 - [x] `pattern-card`
 - [x] `badge`
 - [x] `avatar`
-- [ ] `form-input`
-- [ ] `auth-button`
-- [ ] `marketing-nav`
-- [ ] `trust-logo-row`
-- [ ] `feature-icon-block`
+- [x] `form-input`
+- [x] `auth-button`
+- [x] `marketing-nav`
+- [x] `trust-logo-row`
+- [x] `feature-icon-block`
