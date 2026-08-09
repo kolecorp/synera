@@ -3,9 +3,9 @@
 Tracking the build-out of missing foundation components.
 
 ## Tasks
-- [ ] `sidebar`
-- [ ] `topbar`
-- [ ] `stat-panel`
+- [x] `sidebar`
+- [x] `topbar`
+- [x] `stat-panel`
 - [ ] `node-badge`
 - [ ] `observation-item`
 - [ ] `data-table`
