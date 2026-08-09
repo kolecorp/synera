@@ -1,7 +1,0 @@
-name: Playground workflow
-on: [push]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Playground workflow"
